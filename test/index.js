@@ -18,7 +18,7 @@ function compareFixtures(t, name, msg, opts, postcssOpts) {
   t.equal(actual, expected, msg)
 }
 
-test("@custom-media", function(t) {
+test("font-variant", function(t) {
   compareFixtures(t, "font-variant", "should transform font-variant")
 
   t.end()
