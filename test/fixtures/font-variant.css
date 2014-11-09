@@ -1,0 +1,8 @@
+selector {
+  font-variant-numeric: tabular-nums;
+  font-variant-caps: all-small-caps;
+  font-variant: normal;
+  font-variant: inherit;
+  font-variant: all-small-caps oldstyle-nums;
+  font-variant-position: normal;
+}
