@@ -71,7 +71,7 @@ module.exports = function postcssFontVariant() {
           return fontVariantProperties["font-variant"][val]
         }).join(", ")
       }
-      else if (fontVariantProperties[decl.prop][decl.value]) {
+      else if (fontVariantProperties[decl.prop][decl.value]) {
         newValue = fontVariantProperties[decl.prop][decl.value]
       }
 
