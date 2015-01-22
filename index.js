@@ -54,31 +54,58 @@ for (var prop in fontVariantProperties) {
   }
 }
 
+// Find font-feature-settings declaration before given declaration,
+// create if does not exist
+function getFontFeatureSettingsPrevTo(decl) {
+  var fontFeatureSettings = null;
+  decl.parent.eachDecl(function(decl) {
+    if (decl.prop === "font-feature-settings") {
+      fontFeatureSettings = decl;
+    }
+  })
+
+  if (fontFeatureSettings === null) {
+    fontFeatureSettings = decl.clone()
+    fontFeatureSettings.prop = "font-feature-settings"
+    fontFeatureSettings.value = ""
+    decl.parent.insertBefore(decl, fontFeatureSettings)
+  }
+  return fontFeatureSettings
+}
+
 /**
  * Expose the font-variant plugin.
  */
 module.exports = function postcssFontVariant() {
   return function(styles) {
-    // read custom media queries
-    styles.eachDecl(function(decl) {
-      if (!fontVariantProperties[decl.prop]) {
-        return null
-      }
+    styles.eachRule(function(rule) {
+      var fontFeatureSettings = null
+      // read custom media queries
+      rule.eachDecl(function(decl) {
+        if (!fontVariantProperties[decl.prop]) {
+          return null
+        }
 
-      var newValue = decl.value
-      if (decl.prop === "font-variant") {
-        newValue = decl.value.split(/\s+/g).map(function(val) {
-          return fontVariantProperties["font-variant"][val]
-        }).join(", ")
-      }
-      else if (fontVariantProperties[decl.prop][decl.value]) {
-        newValue = fontVariantProperties[decl.prop][decl.value]
-      }
+        var newValue = decl.value
+        if (decl.prop === "font-variant") {
+          newValue = decl.value.split(/\s+/g).map(function(val) {
+            return fontVariantProperties["font-variant"][val]
+          }).join(", ")
+        }
+        else if (fontVariantProperties[decl.prop][decl.value]) {
+          newValue = fontVariantProperties[decl.prop][decl.value]
+        }
 
-      var newDecl = decl.clone()
-      newDecl.prop = "font-feature-settings"
-      newDecl.value = newValue
-      decl.parent.insertBefore(decl, newDecl)
+        if (fontFeatureSettings === null) {
+          fontFeatureSettings = getFontFeatureSettingsPrevTo(decl);
+        }
+        if (fontFeatureSettings.value) {
+          fontFeatureSettings.value += ", " + newValue;
+        }
+        else {
+          fontFeatureSettings.value = newValue;
+        }
+      })
     })
   }
 }
