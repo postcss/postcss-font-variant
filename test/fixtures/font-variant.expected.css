@@ -20,6 +20,6 @@ selector {
   font-variant: all-small-caps;
 }
 selector {
-  font-feature-settings: normal;
+  font-feature-settings: "subs" off, "sups" off;
   font-variant-position: normal;
 }
