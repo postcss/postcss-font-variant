@@ -23,3 +23,7 @@ selector {
   font-feature-settings: "subs" off, "sups" off;
   font-variant-position: normal;
 }
+selector {
+  font-feature-settings: "kern";
+  font-kerning: normal;
+}
