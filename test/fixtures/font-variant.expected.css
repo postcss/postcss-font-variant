@@ -1,14 +1,25 @@
 selector {
-  font-feature-settings: "tnum";
+  font-feature-settings: "tnum", "smcp", "c2sc";
   font-variant-numeric: tabular-nums;
-  font-feature-settings: "smcp", "c2sc";
   font-variant-caps: all-small-caps;
+}
+selector {
   font-feature-settings: normal;
   font-variant: normal;
+}
+selector {
   font-feature-settings: inherit;
   font-variant: inherit;
+}
+selector {
   font-feature-settings: "smcp", "c2sc", "onum";
   font-variant: all-small-caps oldstyle-nums;
+}
+selector {
+  font-feature-settings: "onum", "smcp", "c2sc";
+  font-variant: all-small-caps;
+}
+selector {
   font-feature-settings: normal;
   font-variant-position: normal;
 }
