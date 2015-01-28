@@ -17,7 +17,8 @@ var fontVariantProperties = {
 
   "font-variant-position": {
     sub: "\"subs\"",
-    "super": "\"sups\""
+    "super": "\"sups\"",
+    normal: "\"subs\" off, \"sups\" off"
   },
 
   "font-variant-caps": {
@@ -50,7 +51,9 @@ var fontVariantProperties = {
 for (var prop in fontVariantProperties) {
   var keys = fontVariantProperties[prop]
   for (var key in keys) {
-    fontVariantProperties["font-variant"][key] = keys[key]
+    if (!(key in fontVariantProperties["font-variant"])) {
+      fontVariantProperties["font-variant"][key] = keys[key]
+    }
   }
 }
 
