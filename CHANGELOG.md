@@ -1,6 +1,7 @@
-# Unreleased
+# 1.1.0 - 2015-01-29
 
 - Fixed: Properly handle font-variant-position:normal ([#3](https://github.com/postcss/postcss-font-variant/pull/3))
+- Added: support font-kerning ([#2](https://github.com/postcss/postcss-font-variant/pull/2))
 
 # 1.0.2 - 2015-01-27
 
