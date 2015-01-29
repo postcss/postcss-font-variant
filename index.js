@@ -41,6 +41,11 @@ var fontVariantProperties = {
     "slashed-zero": "\"zero\""
   },
 
+  "font-kerning": {
+    normal: "\"kern\"",
+    none: "\"kern\" off"
+  },
+
   "font-variant": {
     normal: "normal",
     inherit: "inherit"
