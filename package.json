@@ -5,7 +5,7 @@
   "keywords": [
     "css",
     "postcss",
-    "postcss-plugins",
+    "postcss-plugin",
     "font",
     "variant",
     "font-variant"
@@ -21,12 +21,13 @@
     "LICENSE",
     "index.js"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "postcss": "^4.1.16"
+  },
   "devDependencies": {
-    "jscs": "^1.6.2",
-    "jshint": "^2.5.6",
-    "postcss": "^4.0.2",
-    "tape": "^3.0.0"
+    "jscs": "^2.1.0",
+    "jshint": "^2.8.0",
+    "tape": "^4.0.3"
   },
   "scripts": {
     "lint": "jscs *.js **/*.js && jshint . --exclude-path .gitignore",
