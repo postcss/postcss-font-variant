@@ -1,3 +1,5 @@
+var postcss = require("postcss");
+
 /**
  * font variant convertion map
  *
@@ -84,7 +86,7 @@ function getFontFeatureSettingsPrevTo(decl) {
 /**
  * Expose the font-variant plugin.
  */
-module.exports = function postcssFontVariant() {
+module.exports = postcss.plugin("postcss-font-variant", function() {
   return function(styles) {
     styles.eachRule(function(rule) {
       var fontFeatureSettings = null
@@ -116,4 +118,4 @@ module.exports = function postcssFontVariant() {
       })
     })
   }
-}
+})
