@@ -1,3 +1,8 @@
+# 1.2.0 - 2015-08-13
+
+- Added: compatibility with postcss v4.1.x
+([#5](https://github.com/postcss/postcss-font-variant/pull/5))
+
 # 1.1.0 - 2015-01-29
 
 - Fixed: Properly handle font-variant-position:normal ([#3](https://github.com/postcss/postcss-font-variant/pull/3))
