@@ -68,7 +68,7 @@ for (var prop in fontVariantProperties) {
 // create if does not exist
 function getFontFeatureSettingsPrevTo(decl) {
   var fontFeatureSettings = null;
-  decl.parent.eachDecl(function(decl) {
+  decl.parent.walkDecls(function(decl) {
     if (decl.prop === "font-feature-settings") {
       fontFeatureSettings = decl;
     }
@@ -88,10 +88,10 @@ function getFontFeatureSettingsPrevTo(decl) {
  */
 module.exports = postcss.plugin("postcss-font-variant", function() {
   return function(styles) {
-    styles.eachRule(function(rule) {
+    styles.walkRules(function(rule) {
       var fontFeatureSettings = null
       // read custom media queries
-      rule.eachDecl(function(decl) {
+      rule.walkDecls(function(decl) {
         if (!fontVariantProperties[decl.prop]) {
           return null
         }
