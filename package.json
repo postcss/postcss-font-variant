@@ -1,6 +1,6 @@
 {
   "name": "postcss-font-variant",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "PostCSS plugin to transform W3C font-variant properties to more compatible CSS  (font-feature-settings)",
   "keywords": [
     "css",
@@ -17,8 +17,6 @@
     "url": "https://github.com/postcss/postcss-font-variant.git"
   },
   "files": [
-    "CHANGELOG.md",
-    "LICENSE",
     "index.js"
   ],
   "dependencies": {
