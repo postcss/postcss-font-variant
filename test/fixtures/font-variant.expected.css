@@ -8,6 +8,10 @@ selector {
   font-variant: normal;
 }
 selector {
+  font-feature-settings: normal;
+  font-variant: normal;
+}
+selector {
   font-feature-settings: inherit;
   font-variant: inherit;
 }

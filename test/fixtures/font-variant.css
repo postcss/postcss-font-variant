@@ -6,6 +6,10 @@ selector {
   font-variant: normal;
 }
 selector {
+  font-feature-settings: normal;
+  font-variant: normal;
+}
+selector {
   font-variant: inherit;
 }
 selector {
