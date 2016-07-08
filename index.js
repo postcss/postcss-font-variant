@@ -109,7 +109,7 @@ module.exports = postcss.plugin("postcss-font-variant", function() {
         if (fontFeatureSettings === null) {
           fontFeatureSettings = getFontFeatureSettingsPrevTo(decl);
         }
-        if (fontFeatureSettings.value) {
+        if (fontFeatureSettings.value && fontFeatureSettings.value !== newValue) {
           fontFeatureSettings.value += ", " + newValue;
         }
         else {
