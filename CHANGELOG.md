@@ -1,3 +1,7 @@
+# 3.0.0 - 2017-05-11
+
+- Changed: use PostCSS 6 API
+
 # 2.0.1 - 2016-07-08
 
 - Fixed: existing font-feature-settings being duplicated.
