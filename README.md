@@ -1,6 +1,10 @@
-# postcss-font-variant [![Build Status](https://travis-ci.org/postcss/postcss-font-variant.png)](https://travis-ci.org/postcss/postcss-font-variant)
+# PostCSS Font-Variant [<img src="https://postcss.github.io/postcss/logo.svg" alt="PostCSS Logo" width="90" height="90" align="right">](https://github.com/postcss/postcss/)
 
-> [PostCSS](https://github.com/postcss/postcss) plugin to transform [W3C CSS font variant](http://dev.w3.org/csswg/css-fonts/#propdef-font-variant) properties to more compatible CSS (font-feature-settings).
+[![CSS Status](https://cssdb.org/badge/font-variant-property.svg)](https://cssdb.org/#font-variant-property)
+[![Build Status](https://travis-ci.org/postcss/postcss-font-variant.svg)](https://travis-ci.org/postcss/postcss-font-variant)
+
+PostCSS Font-Variant lets you use `font-variant` in CSS, following the
+[CSS Fonts](https://www.w3.org/TR/css-fonts-3/#font-variant-prop) specification.
 
 ## Installation
 
