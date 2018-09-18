@@ -1,3 +1,7 @@
+# 4.0.0 - 2018-09-17
+
+- Changed: use PostCSS 7 API
+
 # 3.0.0 - 2017-05-11
 
 - Changed: use PostCSS 6 API
