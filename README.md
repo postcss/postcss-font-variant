@@ -6,8 +6,6 @@
 PostCSS Font-Variant lets you use `font-variant` in CSS, following the
 [CSS Fonts](https://www.w3.org/TR/css-fonts-3/#font-variant-prop) specification.
 
-[!['Can I use' table](https://caniuse.bitsofco.de/image/font-variant-alternates.png)](https://caniuse.com/#feat=font-variant-alternates)
-
 ## Installation
 
 ```console
