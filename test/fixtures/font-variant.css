@@ -13,7 +13,7 @@ selector {
   font-variant: inherit;
 }
 selector {
-  font-variant: all-small-caps oldstyle-nums;
+  font-variant: small-caps oldstyle-nums;
 }
 selector {
   font-feature-settings: "onum";
