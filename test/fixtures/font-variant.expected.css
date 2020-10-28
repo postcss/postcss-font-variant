@@ -16,8 +16,8 @@ selector {
   font-variant: inherit;
 }
 selector {
-  font-feature-settings: "smcp", "c2sc", "onum";
-  font-variant: all-small-caps oldstyle-nums;
+  font-feature-settings: "smcp", "onum";
+  font-variant: small-caps oldstyle-nums;
 }
 selector {
   font-feature-settings: "onum", "smcp", "c2sc";
