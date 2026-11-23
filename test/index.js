@@ -23,3 +23,9 @@ test("font-variant", function(t) {
 
   t.end()
 })
+
+test("normal feature settings", function(t) {
+  compareFixtures(t, "normal-feature-settings", "should keep normal out of feature lists")
+
+  t.end()
+})

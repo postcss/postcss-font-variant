@@ -1,0 +1,47 @@
+.normal-before-features {
+  font-variant: normal;
+  font-feature-settings: "smcp" on;
+}
+.normal-after-features {
+  font-feature-settings: "smcp" on;
+  font-variant: normal;
+}
+.features-before-variant {
+  font-feature-settings: normal;
+  font-variant: small-caps;
+}
+.features-after-variant {
+  font-variant: small-caps;
+  font-feature-settings: normal;
+}
+.none-with-normal {
+  font-variant: none;
+  font-feature-settings: normal;
+}
+.normal-before-generated {
+  font-variant: normal;
+  font-variant-caps: small-caps;
+}
+.normal-after-generated {
+  font-variant-caps: small-caps;
+  font-variant: normal;
+}
+.reset-with-authored-features {
+  font-feature-settings: "onum";
+  font-variant-caps: small-caps;
+  font-variant: normal;
+  font-variant-position: sub;
+}
+.reset-with-kerning {
+  font-kerning: none;
+  font-variant-caps: small-caps;
+  font-variant: normal;
+}
+.uppercase-normal {
+  font-variant: NORMAL;
+  font-feature-settings: "smcp" on;
+}
+.uppercase-feature-normal {
+  font-feature-settings: NORMAL;
+  font-variant-caps: small-caps;
+}

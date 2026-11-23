@@ -81,9 +81,19 @@ function getFontFeatureSettingsPrevTo(decl) {
   return fontFeatureSettings
 }
 
+function mergeFeatureSettings(value, newValue) {
+  if (!value || /^normal$/i.test(value)) {
+    return newValue
+  }
+  if (value === newValue || /^normal$/i.test(newValue)) {
+    return value
+  }
+  return value + ", " + newValue
+}
+
 function walkRule(rule) {
   let fontFeatureSettings = null
-  // read custom media queries
+  let resetValue = ""
   rule.walkDecls((decl) => {
     if (!fontVariantProperties[decl.prop]) {
       return null
@@ -101,12 +111,16 @@ function walkRule(rule) {
 
     if (fontFeatureSettings === null) {
       fontFeatureSettings = getFontFeatureSettingsPrevTo(decl);
+      resetValue = fontFeatureSettings.value
     }
-    if (fontFeatureSettings.value && fontFeatureSettings.value !== newValue) {
-      fontFeatureSettings.value += ", " + newValue;
+    if (decl.prop === "font-kerning") {
+      resetValue = mergeFeatureSettings(resetValue, newValue)
+    }
+    if (decl.prop === "font-variant" && /^normal$/i.test(decl.value)) {
+      fontFeatureSettings.value = resetValue || "normal"
     }
     else {
-      fontFeatureSettings.value = newValue;
+      fontFeatureSettings.value = mergeFeatureSettings(fontFeatureSettings.value, newValue)
     }
   })
 }
