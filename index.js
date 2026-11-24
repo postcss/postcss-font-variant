@@ -95,8 +95,13 @@ function walkRule(rule) {
         return fontVariantProperties["font-variant"][val]
       }).join(", ")
     }
-    else if (fontVariantProperties[decl.prop][decl.value]) {
-      newValue = fontVariantProperties[decl.prop][decl.value]
+    else {
+      const values = decl.value.split(/\s+/g).map((val) => {
+        return fontVariantProperties[decl.prop][val]
+      })
+      if (values.every(Boolean)) {
+        newValue = values.join(", ")
+      }
     }
 
     if (fontFeatureSettings === null) {

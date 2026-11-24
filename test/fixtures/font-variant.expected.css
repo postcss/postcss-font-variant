@@ -31,3 +31,15 @@ selector {
   font-feature-settings: "kern";
   font-kerning: normal;
 }
+selector {
+  font-feature-settings: "liga", "clig", "dlig";
+  font-variant-ligatures: common-ligatures discretionary-ligatures;
+}
+selector {
+  font-feature-settings: "tnum", "lnum";
+  font-variant-numeric: tabular-nums lining-nums;
+}
+selector {
+  font-feature-settings: tabular-nums var(--numeric);
+  font-variant-numeric: tabular-nums var(--numeric);
+}
