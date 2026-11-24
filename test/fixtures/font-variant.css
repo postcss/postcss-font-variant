@@ -25,3 +25,12 @@ selector {
 selector {
   font-kerning: normal;
 }
+selector {
+  font-variant-ligatures: common-ligatures discretionary-ligatures;
+}
+selector {
+  font-variant-numeric: tabular-nums lining-nums;
+}
+selector {
+  font-variant-numeric: tabular-nums var(--numeric);
+}
